@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "BingGPT Chat Exporter",
+    "version": "1.0",
+    "description": "A simple extension to export BingGPT chat conversations.",
+    "permissions": [
+        "clipboardWrite",
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_icon": "icon.png",
+        "default_title": "Export BingGPT Chat",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.bing.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
